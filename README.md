@@ -1,8 +1,13 @@
 Spotify-like Music Player
 
+
 A Spotify-like music player created using HTML, CSS, and JavaScript. This project allows you to play, pause, skip, shuffle, and loop your favorite tracks.
 
+
+
 Table of Contents
+
+
 
 Features
 Installation
@@ -22,11 +27,11 @@ Playlist display with active track highlighting
 
 
 Installation
-
 To get a local copy up and running, follow these steps:
 
 Clone the repository:
 git clone https://github.com/manish-2412/Spotify-Clone/tree/main
+
 
 Navigate to the project directory:
 cd spotify-music-player
