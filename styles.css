@@ -1,0 +1,174 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1d1d1d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 50px auto;
+}
+
+.music-player {
+    flex: 1;
+    background-color: #333;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-right: 20px; /* Increased gap */
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.spotify-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.player-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.album-cover {
+    margin-right: 20px;
+}
+
+.cover-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.track-details {
+    text-align: left;
+}
+
+.track-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.artist {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #1db954;
+    color: #fff;
+    border-radius: 50px; /* Makes the button round */
+    margin: 10px; /* Increased margin for spacing */
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #0e8d4f;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: 0 10px;
+    background-color: #555;
+    height: 8px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, #1db954, #4caf50);
+}
+
+.time {
+    font-size: 12px;
+    color: #999;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.volume-slider {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.playlist {
+    flex: 1;
+    background-color: #333;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-left: 20px; /* Increased gap */
+}
+
+.playlist h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.playlist li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+    background-color: #444;
+}
+
+.playlist li.active {
+    background-color: #1db954;
+    color: white;
+}

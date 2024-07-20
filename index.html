@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-like Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <div class="player-info">
+                <img src="spotify.png" alt="Spotify Logo" class="spotify-logo">
+                <h1 class="player-title">Spotify Music Player</h1>
+            </div>
+            <div class="track-info">
+                <div class="album-cover">
+                    <img id="album-cover" src="cover1.png" alt="Album Cover" class="cover-img">
+                </div>
+                <div class="track-details">
+                    <h2 id="track-title" class="track-title">This Feeling</h2>
+                    <p id="track-artist" class="artist">The Chainsmokers</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev-btn" class="control-btn prev-btn" onclick="prevTrack()">Prev</button>
+                <button id="play-btn" class="control-btn play-btn" onclick="togglePlayPause()">Play</button>
+                <button id="next-btn" class="control-btn next-btn" onclick="nextTrack()">Next</button>
+                <div class="control-group">
+                    <button id="shuffle-btn" class="control-btn shuffle-btn" onclick="toggleShuffle()">Shuffle</button>
+                    <button id="loop-btn" class="control-btn loop-btn" onclick="toggleLoop()">Loop</button>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <input type="range" id="progress-bar" class="progress-bar" value="0" step="1">
+                <div class="time-display">
+                    <span id="current-time" class="time">0:00</span> / <span id="duration" class="time">0:00</span>
+                </div>
+            </div>
+            <div class="volume-control">
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
