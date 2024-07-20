@@ -50,16 +50,25 @@ Project Structure
 
 
 spotify-music-player/
-│
+
 ├── index.html         # HTML file for the music player interface
+
 ├── styles.css         # CSS file for styling the music player
+
 ├── script.js          # JavaScript file for music player functionality
+
 ├── cover1.png         # Sample album cover image
+
 ├── cover2.png         # Sample album cover image
+
 ├── cover3.png         # Sample album cover image
+
 ├── cover4.png         # Sample album cover image
+
 ├── cover5.png         # Sample album cover image
+
 └── README.md          # Project README file
+
 
 
 Contributing
