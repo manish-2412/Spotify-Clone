@@ -26,7 +26,7 @@ Installation
 To get a local copy up and running, follow these steps:
 
 Clone the repository:
-git clone https://github.com/your-username/spotify-music-player.git
+git clone https://github.com/manish-2412/Spotify-Clone/tree/main
 
 Navigate to the project directory:
 cd spotify-music-player
