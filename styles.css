@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 90%;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 50px auto;
 }
 
@@ -24,7 +24,7 @@ body {
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin-right: 20px; /* Increased gap */
+    margin-right: 20px;
 }
 
 .player-info {
@@ -78,26 +78,30 @@ body {
 
 .controls {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center align items horizontally */
+    flex-wrap: wrap; 
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .control-btn {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     background-color: #1db954;
     color: #fff;
-    border-radius: 50px; /* Makes the button round */
-    margin: 10px; /* Increased margin for spacing */
+    border-radius: 50%;
+    margin: 10px;
     transition: background-color 0.3s ease;
 }
 
 .control-btn:hover {
     background-color: #0e8d4f;
+}
+
+.control-btn i {
+    vertical-align: middle;
 }
 
 .progress-bar-container {
@@ -139,7 +143,7 @@ body {
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin-left: 20px; /* Increased gap */
+    margin-left: 20px;
 }
 
 .playlist h2 {
@@ -153,7 +157,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 400px; /* Adjust as needed */
+    max-height: 400px;
     overflow-y: auto;
 }
 
