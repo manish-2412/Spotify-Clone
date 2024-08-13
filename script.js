@@ -2,31 +2,31 @@ let songs = [
     {
         title: 'This Feeling',
         artist: 'The Chainsmokers',
-        src: '/Users/manish/Desktop/nice/Projects/Spotify Clone/music1.mp3',
+        src: '/Users/manish/Desktop/-/Projects/Spotify Clone/music1.mp3',
         cover: 'cover1.png'
     },
     {
         title: 'Drag Me Down',
         artist: 'One Direction',
-        src: '/Users/manish/Desktop/nice/Projects/Spotify Clone/music2.mp3',
+        src: '/Users/manish/Desktop/-/Projects/Spotify Clone/music2.mp3',
         cover: 'cover2.png'
     },
     {
         title: 'Tattoos Together',
         artist: 'Lauv',
-        src: '/Users/manish/Desktop/nice/Projects/Spotify Clone/music3.mp3',
+        src: '/Users/manish/Desktop/-/Projects/Spotify Clone/music3.mp3',
         cover: 'cover3.png'
     },
     {
         title: 'Moth To A Flame',
         artist: 'The Weekend',
-        src: '/Users/manish/Desktop/nice/Projects/Spotify Clone/music4.mp3',
+        src: '/Users/manish/Desktop/-/Projects/Spotify Clone/music4.mp3',
         cover: 'cover4.png'
     },
     {
         title: 'Not Like Us',
         artist: 'Kendrik Lamar',
-        src: '/Users/manish/Desktop/nice/Projects/Spotify Clone/music5.mp3',
+        src: '/Users/manish/Desktop/-/Projects/Spotify Clone/music5.mp3',
         cover: 'cover5.png'
     }
 ];
@@ -73,31 +73,42 @@ function togglePlayPause() {
 function playTrack() {
     audioPlayer.play();
     isPlaying = true;
-    playBtn.textContent = 'Pause';
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
     updatePlaylist();
 }
 
 function pauseTrack() {
     audioPlayer.pause();
     isPlaying = false;
-    playBtn.textContent = 'Play';
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
 }
 
 function prevTrack() {
-    currentTrackIndex = (currentTrackIndex - 1 + songs.length) % songs.length;
-    loadTrack(currentTrackIndex);
-    playTrack();
+    if (isShuffle) {
+        shufflePlay();
+    } else {
+        currentTrackIndex = (currentTrackIndex - 1 + songs.length) % songs.length;
+        loadTrack(currentTrackIndex);
+        playTrack();
+    }
 }
 
 function nextTrack() {
-    currentTrackIndex = (currentTrackIndex + 1) % songs.length;
-    loadTrack(currentTrackIndex);
-    playTrack();
+    if (isShuffle) {
+        shufflePlay();
+    } else {
+        currentTrackIndex = (currentTrackIndex + 1) % songs.length;
+        loadTrack(currentTrackIndex);
+        playTrack();
+    }
 }
 
 function toggleShuffle() {
     isShuffle = !isShuffle;
     shuffleBtn.style.backgroundColor = isShuffle ? '#0e8d4f' : '#1db954';
+    if (!isShuffle) {
+        loadTrack(currentTrackIndex);
+    }
 }
 
 function toggleLoop() {
@@ -127,7 +138,6 @@ function formatTime(seconds) {
 }
 
 function shufflePlay() {
-    // Generate a random index different from the current track index
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * songs.length);
